@@ -1,0 +1,16 @@
+name: 02-PR-CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Print Info
+        run: echo "PR validation"
