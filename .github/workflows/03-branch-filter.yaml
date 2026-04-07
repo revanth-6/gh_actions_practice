@@ -1,0 +1,13 @@
+name: 03-Branch-Filter
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing Info
+        run: echo "Main Branch only"
