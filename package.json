@@ -1,7 +1,7 @@
 {
-  "name": "gh-actions-practice",
+  "name": "cache-demo",
   "version": "1.0.0",
-  "scripts": {
-    "test": "echo \"test passed\""
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
