@@ -3,7 +3,7 @@ name: 05-Node-CI
 on:
   push:
     branches:
-      - main
+      - test-pr
 jobs:
   node:
     runs-on: ubuntu-latest
