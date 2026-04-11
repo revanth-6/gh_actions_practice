@@ -2,7 +2,7 @@ name: 01-Basic-CI
 
 on:
   push:
-    branch:
+    branches:
       - main
     
 jobs:
@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4 # actions/checkout@v4 = "Bring my repo code into the CI machine so I can work on it."
 
       - name: Print Info
         run: echo "CI Triggered"
