@@ -13,4 +13,4 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Print Info
-        run: echo "PR validation"
+        run: echo "PR validation done"
