@@ -1,0 +1,12 @@
+name: 13-Artifact
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "data 2" > file2.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app
+          path: file2.txt
