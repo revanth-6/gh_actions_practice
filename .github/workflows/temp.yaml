@@ -1,5 +1,8 @@
 name: temp-generate-lock
-on: [push]
+on:
+  push:
+    paths:
+      - ".github/workflows/temp.yml"
 
 jobs:
   generate:
