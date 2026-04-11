@@ -1,0 +1,9 @@
+name: 17-Debug
+on: [push]
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
+      - run: ls -la
