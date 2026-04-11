@@ -1,0 +1,11 @@
+name: 18-Retry
+on: [push]
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for i in 1 2 3; do
+            echo "Retry $i"
+          done
