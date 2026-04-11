@@ -1,10 +1,28 @@
 name: 14-Artifact-Download
+
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - name: Create file
+        run: echo "data" > file.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: app
+          path: file.txt
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app
+
+      - name: Show file
+        run: cat file.txt
